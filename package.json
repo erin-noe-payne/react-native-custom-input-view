@@ -1,0 +1,29 @@
+{
+  "name": "react-native-custom-input-view",
+  "version": "1.0.0",
+  "description": "Define custom input views for react native text inputs",
+  "main": "dest/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "tsc -d -p . --outDir dest/"
+  },
+  "keywords": [
+    "react-native",
+    "keyboard",
+    "react",
+    "native",
+    "ios",
+    "android"
+  ],
+  "author": "Erin Noe-Payne",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react-native": "^0.48.9",
+    "react": "^16.0.0",
+    "react-native": "^0.48.4",
+    "typescript": "^2.5.3"
+  },
+  "peerDependencies": {
+    "react-native": "^0.48.4"
+  }
+}
