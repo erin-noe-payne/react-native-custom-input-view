@@ -7,35 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05B304BD1F7EF378007DE7D9 /* CustomKeyboardInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B304B51F7EF378007DE7D9 /* CustomKeyboardInputController.m */; };
-		05B304BE1F7EF378007DE7D9 /* CustomKeyboardTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B304B81F7EF378007DE7D9 /* CustomKeyboardTextField.m */; };
-		05B304C01F7EF378007DE7D9 /* CustomKeyboardTextFieldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B304BC1F7EF378007DE7D9 /* CustomKeyboardTextFieldManager.m */; };
+		05C62B931F801561002EAB36 /* RNKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C62B921F801561002EAB36 /* RNKeyboard.m */; };
+		05C62B941F801561002EAB36 /* RNKeyboard.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05C62B911F801561002EAB36 /* RNKeyboard.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		059AFBC21F7EF24800698D31 /* CopyFiles */ = {
+		05C62B8C1F801561002EAB36 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				05C62B941F801561002EAB36 /* RNKeyboard.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		059AFBC41F7EF24800698D31 /* libRNCustomInputView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNCustomInputView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		05B304B51F7EF378007DE7D9 /* CustomKeyboardInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboardInputController.m; sourceTree = SOURCE_ROOT; };
-		05B304B61F7EF378007DE7D9 /* CustomKeyboardTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboardTextField.h; sourceTree = SOURCE_ROOT; };
-		05B304B81F7EF378007DE7D9 /* CustomKeyboardTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboardTextField.m; sourceTree = SOURCE_ROOT; };
-		05B304B91F7EF378007DE7D9 /* CustomKeyboardTextFieldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboardTextFieldManager.h; sourceTree = SOURCE_ROOT; };
-		05B304BA1F7EF378007DE7D9 /* CustomKeyboardInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboardInputController.h; sourceTree = SOURCE_ROOT; };
-		05B304BC1F7EF378007DE7D9 /* CustomKeyboardTextFieldManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboardTextFieldManager.m; sourceTree = SOURCE_ROOT; };
+		05C62B8E1F801561002EAB36 /* libRNKeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNKeyboard.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C62B911F801561002EAB36 /* RNKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNKeyboard.h; sourceTree = "<group>"; };
+		05C62B921F801561002EAB36 /* RNKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNKeyboard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		059AFBC11F7EF24800698D31 /* Frameworks */ = {
+		05C62B8B1F801561002EAB36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,102 +41,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		059AFBBB1F7EF24800698D31 = {
+		05C62B851F801561002EAB36 = {
 			isa = PBXGroup;
 			children = (
-				059AFBC61F7EF24800698D31 /* RNCustomInputView */,
-				059AFBC51F7EF24800698D31 /* Products */,
+				05C62B901F801561002EAB36 /* RNKeyboard */,
+				05C62B8F1F801561002EAB36 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		059AFBC51F7EF24800698D31 /* Products */ = {
+		05C62B8F1F801561002EAB36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				059AFBC41F7EF24800698D31 /* libRNCustomInputView.a */,
+				05C62B8E1F801561002EAB36 /* libRNKeyboard.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		059AFBC61F7EF24800698D31 /* RNCustomInputView */ = {
+		05C62B901F801561002EAB36 /* RNKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				05B304BA1F7EF378007DE7D9 /* CustomKeyboardInputController.h */,
-				05B304B51F7EF378007DE7D9 /* CustomKeyboardInputController.m */,
-				05B304B61F7EF378007DE7D9 /* CustomKeyboardTextField.h */,
-				05B304B81F7EF378007DE7D9 /* CustomKeyboardTextField.m */,
-				05B304B91F7EF378007DE7D9 /* CustomKeyboardTextFieldManager.h */,
-				05B304BC1F7EF378007DE7D9 /* CustomKeyboardTextFieldManager.m */,
+				05C62B911F801561002EAB36 /* RNKeyboard.h */,
+				05C62B921F801561002EAB36 /* RNKeyboard.m */,
 			);
-			path = RNCustomInputView;
+			path = RNKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		059AFBC31F7EF24800698D31 /* RNCustomInputView */ = {
+		05C62B8D1F801561002EAB36 /* RNKeyboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 059AFBCD1F7EF24800698D31 /* Build configuration list for PBXNativeTarget "RNCustomInputView" */;
+			buildConfigurationList = 05C62B971F801561002EAB36 /* Build configuration list for PBXNativeTarget "RNKeyboard" */;
 			buildPhases = (
-				059AFBC01F7EF24800698D31 /* Sources */,
-				059AFBC11F7EF24800698D31 /* Frameworks */,
-				059AFBC21F7EF24800698D31 /* CopyFiles */,
+				05C62B8A1F801561002EAB36 /* Sources */,
+				05C62B8B1F801561002EAB36 /* Frameworks */,
+				05C62B8C1F801561002EAB36 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RNCustomInputView;
-			productName = RNCustomInputView;
-			productReference = 059AFBC41F7EF24800698D31 /* libRNCustomInputView.a */;
+			name = RNKeyboard;
+			productName = RNKeyboard;
+			productReference = 05C62B8E1F801561002EAB36 /* libRNKeyboard.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		059AFBBC1F7EF24800698D31 /* Project object */ = {
+		05C62B861F801561002EAB36 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Erin Noe-Payne";
 				TargetAttributes = {
-					059AFBC31F7EF24800698D31 = {
+					05C62B8D1F801561002EAB36 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 059AFBBF1F7EF24800698D31 /* Build configuration list for PBXProject "RNCustomInputView" */;
+			buildConfigurationList = 05C62B891F801561002EAB36 /* Build configuration list for PBXProject "RNKeyboard" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 059AFBBB1F7EF24800698D31;
-			productRefGroup = 059AFBC51F7EF24800698D31 /* Products */;
+			mainGroup = 05C62B851F801561002EAB36;
+			productRefGroup = 05C62B8F1F801561002EAB36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				059AFBC31F7EF24800698D31 /* RNCustomInputView */,
+				05C62B8D1F801561002EAB36 /* RNKeyboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		059AFBC01F7EF24800698D31 /* Sources */ = {
+		05C62B8A1F801561002EAB36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B304BD1F7EF378007DE7D9 /* CustomKeyboardInputController.m in Sources */,
-				05B304C01F7EF378007DE7D9 /* CustomKeyboardTextFieldManager.m in Sources */,
-				05B304BE1F7EF378007DE7D9 /* CustomKeyboardTextField.m in Sources */,
+				05C62B931F801561002EAB36 /* RNKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		059AFBCB1F7EF24800698D31 /* Debug */ = {
+		05C62B951F801561002EAB36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -195,7 +185,7 @@
 			};
 			name = Debug;
 		};
-		059AFBCC1F7EF24800698D31 /* Release */ = {
+		05C62B961F801561002EAB36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,7 +234,7 @@
 			};
 			name = Release;
 		};
-		059AFBCE1F7EF24800698D31 /* Debug */ = {
+		05C62B981F801561002EAB36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -255,7 +245,7 @@
 			};
 			name = Debug;
 		};
-		059AFBCF1F7EF24800698D31 /* Release */ = {
+		05C62B991F801561002EAB36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -269,25 +259,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		059AFBBF1F7EF24800698D31 /* Build configuration list for PBXProject "RNCustomInputView" */ = {
+		05C62B891F801561002EAB36 /* Build configuration list for PBXProject "RNKeyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				059AFBCB1F7EF24800698D31 /* Debug */,
-				059AFBCC1F7EF24800698D31 /* Release */,
+				05C62B951F801561002EAB36 /* Debug */,
+				05C62B961F801561002EAB36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		059AFBCD1F7EF24800698D31 /* Build configuration list for PBXNativeTarget "RNCustomInputView" */ = {
+		05C62B971F801561002EAB36 /* Build configuration list for PBXNativeTarget "RNKeyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				059AFBCE1F7EF24800698D31 /* Debug */,
-				059AFBCF1F7EF24800698D31 /* Release */,
+				05C62B981F801561002EAB36 /* Debug */,
+				05C62B991F801561002EAB36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 059AFBBC1F7EF24800698D31 /* Project object */;
+	rootObject = 05C62B861F801561002EAB36 /* Project object */;
 }

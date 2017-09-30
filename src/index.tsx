@@ -30,8 +30,8 @@ export function registerKeyboard(name: string, component: CustomKeyboardClass) {
 }
 
 interface CustomKeyboardRendererProps {
-  keyboardId: string;
-  keyboardType: string;
+  inputId: number;
+  keyboardName: string;
 }
 
 class CustomKeyboardRenderer extends React.PureComponent<CustomKeyboardRendererProps> {
