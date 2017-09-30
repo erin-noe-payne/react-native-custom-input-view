@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Define custom input views for react native text inputs",
   "main": "dest/index.js",
+  "types": "dest/index.d.ts",
   "files": ["android", "ios", "dest"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

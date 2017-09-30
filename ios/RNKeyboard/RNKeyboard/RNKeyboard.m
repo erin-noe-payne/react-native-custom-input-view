@@ -33,7 +33,7 @@ RCT_EXPORT_MODULE()
     return dispatch_get_main_queue();
 }
 
-RCT_EXPORT_METHOD(install:(NSNumber *)inputId keyboard:(NSString*)keyboardName) {
+RCT_EXPORT_METHOD(install:(nonnull NSNumber *)inputId keyboard:(NSString*)keyboardName) {
     UIView* keyboard = [[RCTRootView alloc] initWithBridge:_bridge moduleName:@"CustomKeyboard" initialProperties:
                         @{
                           @"inputId": inputId,
@@ -41,26 +41,26 @@ RCT_EXPORT_METHOD(install:(NSNumber *)inputId keyboard:(NSString*)keyboardName) 
                           }
                         ];
     
-    keyboard.frame = CGRectMake(0, 0, 0, 200);
+//    keyboard.frame = CGRectMake(0, 0, 0, 200);
     
     BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
     NativeTextInput *textInput = [reactTextView backedTextInputView];
     textInput.inputView = keyboard;
 }
 
-RCT_EXPORT_METHOD(uninstall:(NSNumber *)inputId) {
+RCT_EXPORT_METHOD(uninstall:(nonnull NSNumber *)inputId) {
     BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
     NativeTextInput *textInput = [reactTextView backedTextInputView];
     textInput.inputView = nil;
 }
 
-RCT_EXPORT_METHOD(insertText:(NSNumber*)inputId text:(NSString*)text) {
+RCT_EXPORT_METHOD(insertText:(nonnull NSNumber*)inputId text:(NSString*)text) {
     BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
     NativeTextInput *textInput = [reactTextView backedTextInputView];
     [textInput insertText:text];
 }
 
-RCT_EXPORT_METHOD(deleteBackward:(NSNumber*)inputId) {
+RCT_EXPORT_METHOD(deleteBackward:(nonnull NSNumber*)inputId) {
     BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
     NativeTextInput *textInput = [reactTextView backedTextInputView];
     [textInput deleteBackward];

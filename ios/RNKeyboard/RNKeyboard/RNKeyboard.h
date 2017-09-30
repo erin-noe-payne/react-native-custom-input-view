@@ -10,10 +10,10 @@
 
 @interface RNKeyboard: NSObject <RCTBridgeModule>
 
-- (void) install:(NSNumber*)inputId keyboard:(NSString*)keyboardName;
-- (void) uninstall:(NSNumber*)inputId;
-- (void) insertText:(NSNumber*)inputId text:(NSString*)text;
-- (void) deleteBackward:(NSNumber*)inputId;
+- (void) install:(nonnull NSNumber*)inputId keyboard:(NSString*)keyboardName;
+- (void) uninstall:(nonnull NSNumber*)inputId;
+- (void) insertText:(nonnull NSNumber*)inputId text:(NSString*)text;
+- (void) deleteBackward:(nonnull NSNumber*)inputId;
 
 @end
 
