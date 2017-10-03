@@ -20,7 +20,24 @@
 
 @end
 
-@implementation RNKeyboard
+@interface PlaceholderKeyboardView : UIView <UIInputViewAudioFeedback>
+@end
+
+@implementation PlaceholderKeyboardView
+
+- (BOOL) enableInputClicksWhenVisible {
+    return YES;
+}
+
+- (void) playInputClick {
+   [[UIDevice currentDevice] playInputClick];
+}
+
+@end
+
+@implementation RNKeyboard {
+    PlaceholderKeyboardView _keyboard;
+}
 
 @synthesize bridge = _bridge;
 
@@ -33,37 +50,21 @@ RCT_EXPORT_MODULE()
     return dispatch_get_main_queue();
 }
 
-RCT_EXPORT_METHOD(install:(nonnull NSNumber *)inputId keyboard:(NSString*)keyboardName) {
-    UIView* keyboard = [[RCTRootView alloc] initWithBridge:_bridge moduleName:@"CustomKeyboard" initialProperties:
-                        @{
-                          @"inputId": inputId,
-                          @"keyboardName": keyboardName
-                          }
-                        ];
-    
-    keyboard.frame = CGRectMake(0, 0, 0, 216);
-    
-    BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
-    NativeTextInput *textInput = [reactTextView backedTextInputView];
-    textInput.inputView = keyboard;
+- (PlaceholderKeyboardView) getPlaceholderKeyboard {
+    if (_keyboard == nil) {
+        _keyboard = [[PlaceholderKeyboardView alloc] init]
+    }
+    return _keyboard
 }
 
-RCT_EXPORT_METHOD(uninstall:(nonnull NSNumber *)inputId) {
+RCT_EXPORT_METHOD(disableNativeKeyboard:(nonnull NSNumber*) inputId) {
     BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
     NativeTextInput *textInput = [reactTextView backedTextInputView];
-    textInput.inputView = nil;
+    textInput.inputView = [self getPlaceholderKeyboard];
 }
 
-RCT_EXPORT_METHOD(insertText:(nonnull NSNumber*)inputId text:(NSString*)text) {
-    BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
-    NativeTextInput *textInput = [reactTextView backedTextInputView];
-    [textInput insertText:text];
-}
-
-RCT_EXPORT_METHOD(deleteBackward:(nonnull NSNumber*)inputId) {
-    BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
-    NativeTextInput *textInput = [reactTextView backedTextInputView];
-    [textInput deleteBackward];
+RCT_EXPORT_METHOD(playInputClick) {
+    [[self getPlaceholderKeyboard] playInputClick]
 }
 
 @end
