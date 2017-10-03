@@ -41,7 +41,7 @@ RCT_EXPORT_METHOD(install:(nonnull NSNumber *)inputId keyboard:(NSString*)keyboa
                           }
                         ];
     
-//    keyboard.frame = CGRectMake(0, 0, 0, 200);
+    keyboard.frame = CGRectMake(0, 0, 0, 216);
     
     BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
     NativeTextInput *textInput = [reactTextView backedTextInputView];
