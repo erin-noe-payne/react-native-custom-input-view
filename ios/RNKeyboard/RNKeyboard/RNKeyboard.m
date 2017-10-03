@@ -25,6 +25,12 @@
 
 @implementation PlaceholderKeyboardView
 
+- (instancetype)init {
+    self = [super init];
+    self.frame = CGRectMake(0, 0, 0, 1);
+    return self;
+}
+
 - (BOOL) enableInputClicksWhenVisible {
     return YES;
 }
@@ -36,7 +42,7 @@
 @end
 
 @implementation RNKeyboard {
-    PlaceholderKeyboardView _keyboard;
+    PlaceholderKeyboardView *_keyboard;
 }
 
 @synthesize bridge = _bridge;
@@ -50,21 +56,22 @@ RCT_EXPORT_MODULE()
     return dispatch_get_main_queue();
 }
 
-- (PlaceholderKeyboardView) getPlaceholderKeyboard {
+- (PlaceholderKeyboardView *) getPlaceholderKeyboard {
     if (_keyboard == nil) {
-        _keyboard = [[PlaceholderKeyboardView alloc] init]
+        _keyboard = [[PlaceholderKeyboardView alloc] init];
     }
-    return _keyboard
+    return _keyboard;
 }
 
 RCT_EXPORT_METHOD(disableNativeKeyboard:(nonnull NSNumber*) inputId) {
     BackedTextView *reactTextView = (BackedTextView *)[_bridge.uiManager viewForReactTag:inputId];
     NativeTextInput *textInput = [reactTextView backedTextInputView];
     textInput.inputView = [self getPlaceholderKeyboard];
+    [textInput reloadInputViews]
 }
 
 RCT_EXPORT_METHOD(playInputClick) {
-    [[self getPlaceholderKeyboard] playInputClick]
+    [[self getPlaceholderKeyboard] playInputClick];
 }
 
 @end

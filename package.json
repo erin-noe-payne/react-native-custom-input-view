@@ -4,7 +4,11 @@
   "description": "Define custom input views for react native text inputs",
   "main": "dest/index.js",
   "types": "dest/index.d.ts",
-  "files": ["android", "ios", "dest"],
+  "files": [
+    "android",
+    "ios",
+    "dest"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "tsc -d -p . --outDir dest/"
@@ -22,6 +26,7 @@
   "author": "Erin Noe-Payne",
   "license": "MIT",
   "devDependencies": {
+    "@types/lodash": "^4.14.76",
     "@types/react-native": "^0.48.9",
     "react": "^16.0.0",
     "react-native": "^0.48.4",
